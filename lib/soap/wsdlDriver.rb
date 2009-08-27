@@ -124,7 +124,7 @@ private
 
   def add_operation(drv, binding)
     name_creator = WSDL::SOAP::ClassNameCreator.new
-    modulepath = 'WSDLDriverFactory'
+    modulepath = %w(WSDLDriverFactory)
     methoddefcreator =
       WSDL::SOAP::MethodDefCreator.new(@wsdl, name_creator, modulepath, {})
     mdefs = methoddefcreator.create(binding.name)

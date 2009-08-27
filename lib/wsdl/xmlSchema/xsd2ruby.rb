@@ -49,7 +49,7 @@ private
   end
 
   def create_file
-    @modulepath = @opt['module_path']
+    @modulepath = Array(@opt['module_path'])
     create_classdef if @opt.key?('classdef')
     create_mapping_registry if @opt.key?('mapping_registry')
     create_mapper if @opt.key?('mapper')
